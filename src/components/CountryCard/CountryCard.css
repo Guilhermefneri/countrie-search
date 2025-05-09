@@ -1,0 +1,21 @@
+.countryCard {
+  border: 1px solid #dddddd;
+  background-color: #fafafa;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 13px;
+  margin: auto;
+  padding: 20px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.flags {
+  width: 130px;
+  height: 82px;
+  border-radius: 9px;
+}
+
+.countryName {
+  margin-bottom: 10px;
+}
