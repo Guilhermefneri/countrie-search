@@ -15,7 +15,8 @@ function CountryCard({ country }) {
         />
         <h3 className="countryName">{country.name.common}</h3>
         <h4>
-          Population: <span className="span">{country.population}</span>
+          Population:{" "}
+          <span className="span">{country.population.toLocaleString()}</span>
         </h4>
         <h4>
           Region: <span className="span">{country.region}</span>
