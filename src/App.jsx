@@ -10,7 +10,10 @@ function App() {
   const [countries, setCountries] = useState([]);
   const [search, setSearch] = useState("");
   const [region, setRegion] = useState("");
+  const [subregion, setSubregion] = useState("");
   const [language, setLanguage] = useState("");
+  const [currencies, setCurrencies] = useState("");
+  const [population, setPopulation] = useState("");
 
   // const [filteredCountries, setFilteredCountries] = useState([]);
 
@@ -30,12 +33,33 @@ function App() {
       if (!region) return true;
       return country.region === region;
     })
+    // filtro por subregiao
+    .filter((country) => {
+      if (!subregion) return true;
+      return country.subregion === subregion;
+    })
     // filtro por idioma
     .filter((country) => {
       if (!language) return true;
       // se o idioma for null ou undefined usa um objeto vazio {}, evitando erro
       const langValue = Object.values(country.languages || {});
       return langValue.includes(language);
+    })
+    // filtra por moeda
+    .filter((country) => {
+      if (!currencies) return true;
+      const countryCurrencie = Object.values(country.currencies ?? {})[0]?.name;
+      return countryCurrencie === currencies;
+    })
+    .filter((country) => {
+      if (!population) return true;
+
+      if (population === "small") return country.population < 1000000;
+      if (population === "medium")
+        return country.population >= 1000000 && country.population < 10000000;
+      if (population === "large")
+        return country.population >= 10000000 && country.population < 50000000;
+      if (population === "veryLarge") return country.population >= 50000000;
     })
     // pesquisa dos paises no input
     .filter((country) =>
@@ -49,8 +73,14 @@ function App() {
       <SelectFilter
         region={region}
         setRegion={setRegion}
+        subregion={subregion}
+        setSubregion={setSubregion}
         language={language}
         setLanguage={setLanguage}
+        currencies={currencies}
+        setCurrencies={setCurrencies}
+        population={population}
+        setPopulation={setPopulation}
       />
 
       <h1>Lista de Países</h1>
