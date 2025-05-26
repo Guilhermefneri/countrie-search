@@ -69,7 +69,10 @@ function Modal({ modal, toggleModal, countries }) {
               </div>
               <div className="infoGroup">
                 <span>Dialing Code:</span> {countries.idd?.root}
-                {countries.idd?.suffixes?.join(", ") || ""}
+                {countries.idd?.suffixes
+                  ? countries.idd.suffixes.slice(0, 10).join(", ") +
+                    (countries.idd.suffixes.length > 10 ? ", ..." : "")
+                  : ""}
               </div>
             </div>
           </div>
