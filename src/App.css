@@ -10,3 +10,15 @@
 body {
   background-color: #f4f4f4;
 }
+
+.noResults {
+  text-align: center;
+  margin-top: 13rem;
+}
+
+@media (max-width: 768px) {
+  .noResults {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+}

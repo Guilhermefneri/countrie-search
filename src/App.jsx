@@ -83,8 +83,13 @@ function App() {
         setPopulation={setPopulation}
       />
 
-      <h1>Lista de Países</h1>
-      <CountryList countries={filteredCountries} />
+      {filteredCountries.length > 0 ? (
+        <CountryList countries={filteredCountries} />
+      ) : (
+        <p className="noResults">
+          No results found. Try a different name or check your search.
+        </p>
+      )}
     </div>
   );
 }
