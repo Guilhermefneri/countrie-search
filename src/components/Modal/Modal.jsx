@@ -41,8 +41,8 @@ function Modal({ modal, toggleModal, countries }) {
               </div>
               <div className="infoGroup">
                 <span>Currencies:</span>{" "}
-                {Object.values(countries.currencies)[0].name || "N/A"}{" "}
-                {Object.values(countries.currencies)[0].symbol}
+                {Object.values(countries.currencies ?? {})[0]?.name || "N/A"}{" "}
+                {Object.values(countries.currencies ?? {})[0]?.symbol}
               </div>
               <div className="infoGroup">
                 <span>Subregion:</span> {countries.subregion || "N/A"}
