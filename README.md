@@ -1,4 +1,4 @@
-## 🌍 Countries Search
+## 🌍 Countrie Search
 
 Uma aplicação desenvolvida em React que permite pesquisar e visualizar informações sobre países utilizando a [REST Countries API](https://restcountries.com/). Este projeto foi criado com o objetivo de praticar o consumo de APIs, os conceitos de React, arquitetura de componentes e oferecer uma experiência de usuário limpa e intuitiva.
 
