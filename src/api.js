@@ -1,4 +1,4 @@
-const url = 'https://restcountries.com/v3.1/all'
+const url = 'https://restcountries.com/v3.1/all?fields=name,region,subregion,languages,currencies,population,cca3,flags,idd';
 
 // busca dos países
 export const fetchCountries = async () => {
