@@ -16,7 +16,7 @@ function SearchBar({ search, setSearch }) {
 
   return (
     <div className="search">
-      <h1 className="title">CountryFinder</h1>
+      <h1 className="title">CountrieSearch</h1>
       <input
         className="input"
         type="text"

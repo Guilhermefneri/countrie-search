@@ -68,7 +68,7 @@ function App() {
 
   return (
     <div>
-      <title>CountryFinder</title>
+      <title>CountrieSearch</title>
       <SearchBar search={search} setSearch={setSearch} />
       <SelectFilter
         region={region}
